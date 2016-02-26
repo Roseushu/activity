@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+<title>专题</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<div class="wrap">
+    	<div class="articleWrap">
+        	<img src="images/6.jpg" alt=""/>
+            <h1>给妈妈和BB的爱</h1>
+			<p>大多数妈妈会通过写日志或者拍照的方式来捕捉他们孩子成长的美好瞬间，但是有一位妈妈，她通过手绘漫画的方式，把家里两个宝宝的成长点滴记录了下来，这份手绘漫画成长纪念册瞬间刷爆了朋友圈，这位妈妈的技能简直令人“羡慕嫉妒恨”啊！到最后甚至被朋友们“逼着”尽快更新，但在这位妈妈心中，就像她在漫画中说的一样：“妈妈这辈子最大的幸福，是有你们俩个！”</p>
+        	<img src="images/sp6_1.png" alt=""/>
+        	<img src="images/sp6_2.png" alt=""/>
+        	<img src="images/sp6_3.png" alt=""/>
+        	<img src="images/sp6_4.png" alt=""/>
+        	<img src="images/sp6_5.png" alt=""/>
+        	<img src="images/sp6_6.png" alt=""/>
+        	<img src="images/sp6_7.png" alt=""/>
+			<p>这么可爱的孩子、这么有才的妈妈，来看看本期为各位妈妈和宝宝带来的呵护和爱吧！</p>
+        </div>
+        <div class="goodsWrap">
+        	<div class="left" onclick="openGoods(156)">
+            	<dl>
+                	<dt><img src="images/s6_1.jpeg" alt=""/></dt>
+                    <dd>
+                    	<p class="text">韩国母婴B&B保宁宝宝软毛训练牙刷1段2-4岁</p>
+                        <p class="price"><i>￥</i>18.<i>6</i></p>
+                        <span></span>
+                    </dd>
+                </dl>
+            </div>
+        	<div class="right" onclick="openGoods(160)">
+            	<dl>
+                	<dt><img src="images/s6_2.jpeg" alt=""/></dt>
+                    <dd>
+                    	<p class="text">韩国母婴B&B 保宁宝宝软毛训练牙刷2段5-7岁</p>
+                        <p class="price"><i>￥</i>18.<i>6</i></p>
+                        <span></span>
+                    </dd>
+                </dl>
+            </div>
+        	<div class="left" onclick="openGoods(161)">
+            	<dl>
+                	<dt><img src="images/s6_3.jpeg" alt=""/></dt>
+                    <dd>
+                    	<p class="text">韩国母婴B&B保宁宝宝软毛护理软毛牙刷3段8岁以上</p>
+                        <p class="price"><i>￥</i>18.<i>6</i></p>
+                        <span></span>
+                    </dd>
+                </dl>
+            </div>
+        	<div class="right" onclick="openGoods(317)">
+            	<dl>
+                	<dt><img src="images/s6_5.jpeg" alt=""/></dt>
+                    <dd>
+                    	<p class="text">韩国babience宝宝洗发水&沐浴露 245ml </p>
+                        <p class="price"><i>￥</i>158.<i>00</i></p>
+                        <span></span>
+                    </dd>
+                </dl>
+            </div>
+        	<div class="left" onclick="openGoods(320)">
+            	<dl>
+                	<dt><img src="images/s6_6.jpeg" alt=""/></dt>
+                    <dd>
+                    	<p class="text">韩国babience宝宝润肤精油150ml</p>
+                        <p class="price"><i>￥</i>162.<i>00</i></p>
+                        <span></span>
+                    </dd>
+                </dl>
+            </div>
+        	<div class="right" onclick="openGoods(321)">
+            	<dl>
+                	<dt><img src="images/s6_7.jpeg" alt=""/></dt>
+                    <dd>
+                    	<p class="text">韩国babience宝宝面霜保湿润肤霜100ml</p>
+                        <p class="price"><i>￥</i>169.<i>00</i></p>
+                        <span></span>
+                    </dd>
+                </dl>
+            </div>	
+        	<div class="left" onclick="openGoods(163)">
+            	<dl>
+                	<dt><img src="images/s6_4.jpeg" alt=""/></dt>
+                    <dd>
+                    	<p class="text">韩国母婴B&B保宁 牙膏 儿童牙膏</p>
+                        <p class="price"><i>￥</i>18.<i>00</i></p>
+                        <span></span>
+                    </dd>
+                </dl>
+            </div>			
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+		function openGoods(n){ //未认证调用app方法
+		if(browser.versions.ios){
+			window.location.href="zmg://loadUrl/" + n
+		}else{
+		js.method(n);
+		}
+		}	
+				//判断访问终端
+		var browser = {
+		    versions:function(){
+		        var u = navigator.userAgent, app = navigator.appVersion;
+		        return {
+		            trident: u.indexOf('Trident') > -1, //IE内核
+		            presto: u.indexOf('Presto') > -1, //opera内核
+		            webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+		            gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1,//火狐内核
+		            mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
+		            ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+		            android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器
+		            iPhone: u.indexOf('iPhone') > -1 , //是否为iPhone或者QQHD浏览器
+		            iPad: u.indexOf('iPad') > -1, //是否iPad
+		            webApp: u.indexOf('Safari') == -1, //是否web应该程序，没有头部与底部
+		            weixin: u.indexOf('MicroMessenger') > -1, //是否微信
+		            qq: u.match(/\sQQ/i) == " qq" //是否QQ
+		        };
+		    }(),
+		    language:(navigator.browserLanguage || navigator.language).toLowerCase()
+		}
+</script>
+</html>

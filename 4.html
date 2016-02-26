@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+<title>专题</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<div class="wrap">
+    	<div class="articleWrap">
+        	<img src="images/4.jpg" alt=""/>
+            <h1>作为一名吃货怎可错过</h1>
+			<p>喜欢吃的人，吃到美食心情就好，容易满足！</p>
+            <p>喜欢吃的人，身体倍儿棒，吃嘛嘛香，身体健康！</p>
+        	<img src="images/sp4_1.jpg" alt=""/>
+            <p>喜欢吃的人，随手就能写出吃后感，拍出美食照，文采好有艺术范儿！</p>
+            <p>喜欢吃的人，能够深刻理解“食色性也”的真理，善解人意！</p>
+        	<img src="images/sp4_2.jpg" alt=""/>
+            <p>喜欢吃的人，发现好吃的会马上告诉小伙伴，乐于助人！</p>
+            <p>喜欢吃的人，乐于尝试未知的美食，具有探索精神！</p>
+        	<img src="images/sp4_3.jpg" alt=""/>
+            <p>喜欢吃的人，说吃就吃，随时都能吃，执行力强！</p>
+            <p>喜欢吃的人，什么都能吃不挑食，保护环境和自然生态！</p>
+        	<img src="images/sp4_4.jpg" alt=""/>
+            <p>喜欢吃的人，精通食物搭配和养生，知识渊博！</p>
+            <p>喜欢吃的人，最最最重要的是，拥有一颗热爱生活年轻的心！</p>
+        	<img src="images/sp4_5.jpg" alt=""/>
+            <p>话不多说，开吃！</p>
+        </div>
+        <div class="goodsWrap">
+        	<div class="left" onclick="openGoods(159)">
+            	<dl>
+                	<dt><img src="images/s4_1.jpeg" alt=""/></dt>
+                    <dd>
+                    	<p class="text">韩国休闲零食 海太蜂蜜黄油薯角 65g</p>
+                        <p class="price"><i>￥</i>14.<i>8</i></p>
+                        <span></span>
+                    </dd>
+                </dl>
+            </div>
+        	<div class="left" onclick="openGoods(154)">
+            	<dl>
+                	<dt><img src="images/s4_3.jpeg" alt=""/></dt>
+                    <dd>
+                    	<p class="text">韩国休闲零食 乐天奶油樱桃蛋黄饼200g</p>
+                        <p class="price"><i>￥</i>35.<i>00</i></p>
+                        <span></span>
+                    </dd>
+                </dl>
+            </div>
+        	<div class="right" onclick="openGoods(167)">
+            	<dl>
+                	<dt><img src="images/s4_2.jpeg" alt=""/></dt>
+                    <dd>
+                    	<p class="text">韩国休闲零食 Tom‘s farm蜂蜜杏仁 gilim蜂蜜黄油扁桃仁35g</p>
+                        <p class="price"><i>￥</i>56.<i>00</i></p>
+                        <span></span>
+                    </dd>
+                </dl>
+            </div>			
+        	<div class="right" onclick="openGoods(169)">
+            	<dl>
+                	<dt><img src="images/s4_4.jpeg" alt=""/></dt>
+                    <dd>
+                    	<p class="text">韩国休闲零食 好丽友【奥里恩预感薯片】非膨化食品 非油炸 60g</p>
+                        <p class="price"><i>￥</i>8.<i>8</i></p>
+                        <span></span>
+                    </dd>
+                </dl>
+            </div>
+        	<div class="left" onclick="openGoods(162)">
+            	<dl>
+                	<dt><img src="images/s4_5.png" alt=""/></dt>
+                    <dd>
+                    	<p class="text">韩国休闲零食 好丽友布朗尼蛋糕泡芙巧克力味80g</p>
+                        <p class="price"><i>￥</i>16.<i>9</i></p>
+                        <span></span>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+		function openGoods(n){ //未认证调用app方法
+		if(browser.versions.ios){
+			window.location.href="zmg://loadUrl/" + n
+		}else{
+		js.method(n);
+		}
+		}	
+				//判断访问终端
+		var browser = {
+		    versions:function(){
+		        var u = navigator.userAgent, app = navigator.appVersion;
+		        return {
+		            trident: u.indexOf('Trident') > -1, //IE内核
+		            presto: u.indexOf('Presto') > -1, //opera内核
+		            webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+		            gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1,//火狐内核
+		            mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
+		            ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+		            android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器
+		            iPhone: u.indexOf('iPhone') > -1 , //是否为iPhone或者QQHD浏览器
+		            iPad: u.indexOf('iPad') > -1, //是否iPad
+		            webApp: u.indexOf('Safari') == -1, //是否web应该程序，没有头部与底部
+		            weixin: u.indexOf('MicroMessenger') > -1, //是否微信
+		            qq: u.match(/\sQQ/i) == " qq" //是否QQ
+		        };
+		    }(),
+		    language:(navigator.browserLanguage || navigator.language).toLowerCase()
+		}
+</script>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+<title>专题</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<div class="wrap">
+    	<div class="articleWrap">
+        	<img src="images/3.png" alt=""/>
+            <h1>雾霾、细菌、灰尘统统走开</h1>
+			<p>相比于鲁霾的沉重，冀霾的激烈，沪霾的湿热和粤霾的阴冷，我更喜欢京霾的醇厚，它是如此的真实，又是如此的具体。黄土的甜腥与秸秆焚烧的碳香充分混合，再加上尾气的催化和低气压的衬托，最后再经热源袅袅硫烟的勾兑，使得京霾口感干冽适口，吸入后挂肺持久绵长，让品味者肺腑欲焚，欲罢不能，仿佛回到了那种初恋的感觉！</p>
+            <p>咳咳咳！该醒醒了，据百度大数据统计，目前在百度知道中，有关雾霾的问答有300多万条，平均每天有约50万用户浏览与雾霾相关的问答内容！网友总结出五大防霾奇招：</p>
+            <p class="text_1 strongText">1.吃青菜！！！</p>
+            <div class="centerImg"><img src="images/sp3_1.png" alt=""/></div>
+            <p class="text_1 strongText">2.香烟过滤嘴插鼻孔！！！</p>
+            <div class="centerImg"><img src="images/sp3_2.png" alt=""/></div>
+            <p class="text_1 strongText">3.做防霾操！！！</p>
+            <div class="centerImg"><img src="images/sp3_3.png" alt=""/></div>
+            <p class="text_1 strongText">4.喝防雾霾茶！！！</p>
+            <div class="centerImg"><img src="images/sp3_4.png" alt=""/></div>
+            <p class="text_1 strongText">5.自制防毒面具！！！</p>
+            <div class="centerImg"><img src="images/sp3_5.png" alt=""/></div>
+            <p>以上奇招纯属娱乐，还是回到咱们这边看看更靠谱的防霾神器，来跟着小编一起唱：“深呼吸，闭上你的眼睛，全世界有最清新氧气~~~”</p>
+        </div>
+        <div class="goodsWrap">
+            <div class="left" onclick="openGoods(344)">
+            	<dl>
+                	<dt><img src="images/s3_1.jpeg" alt=""/></dt>
+                    <dd>
+                    	<p class="text">新西兰营养保健BioBalance 清肺液 200ML</p>
+                        <p class="price"><i>￥</i>168.<i>00</i></p>
+                        <span></span>
+                    </dd>
+                </dl>
+            </div>
+        	<div class="right" onclick="openGoods(286)">
+            	<dl>
+                	<dt><img src="images/s3_4.jpeg" alt=""/></dt>
+                    <dd>
+                    	<p class="text">韩国about me  柠檬亮肤按摩霜 150ml</p>
+                        <p class="price"><i>￥</i>88.<i>00</i></p>
+                        <span></span>
+                    </dd>
+                </dl>
+            </div>			
+        	<div class="left" onclick="openGoods(316)">
+            	<dl>
+                	<dt><img src="images/s3_3.jpeg" alt=""/></dt>
+                    <dd>
+                    	<p class="text">naetre正品4M防雾霾口罩4层防雾霾防PM2.5防微细尘埃（儿童款）</p>
+                        <p class="price"><i>￥</i>9.<i>9</i></p>
+                        <span></span>
+                    </dd>
+                </dl>
+            </div>
+        	<div class="right" onclick="openGoods(191)">
+            	<dl>
+                	<dt><img src="images/s3_2.jpeg" alt=""/></dt>
+                    <dd>
+                    	<p class="text">韩国生活家电 Nanum不插电的爱心盆栽加湿器 Love Pot自然蒸发情人礼物 </p>
+                        <p class="price"><i>￥</i>208.<i>00</i></p>
+                        <span></span>
+                    </dd>
+                </dl>
+            </div>		
+
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+		function openGoods(n){ //未认证调用app方法
+		if(browser.versions.ios){
+			window.location.href="zmg://loadUrl/" + n
+		}else{
+		js.method(n);
+		}
+		}	
+				//判断访问终端
+		var browser = {
+		    versions:function(){
+		        var u = navigator.userAgent, app = navigator.appVersion;
+		        return {
+		            trident: u.indexOf('Trident') > -1, //IE内核
+		            presto: u.indexOf('Presto') > -1, //opera内核
+		            webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+		            gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1,//火狐内核
+		            mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
+		            ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+		            android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器
+		            iPhone: u.indexOf('iPhone') > -1 , //是否为iPhone或者QQHD浏览器
+		            iPad: u.indexOf('iPad') > -1, //是否iPad
+		            webApp: u.indexOf('Safari') == -1, //是否web应该程序，没有头部与底部
+		            weixin: u.indexOf('MicroMessenger') > -1, //是否微信
+		            qq: u.match(/\sQQ/i) == " qq" //是否QQ
+		        };
+		    }(),
+		    language:(navigator.browserLanguage || navigator.language).toLowerCase()
+		}
+</script>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+<title>专题</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<div class="wrap">
+    	<div class="articleWrap">
+        	<img src="images/5.jpg" alt=""/>
+            <h1>要成为女神，姐妹们可以效仿如下：</h1>
+            <p>旋转式平板支撑(*@ω@*) </p>
+        	<img src="images/sp5_1.png" alt=""/>
+            <p>跳绳(๑╹∀╹๑ )</p>
+        	<img src="images/sp5_2.png" alt=""/>
+            <p>撬式拽拉重物(⊙ω⊙)</p>
+        	<img src="images/sp5_3.png" alt=""/>
+            <p>抬腿俯卧撑(╯•ω•╰)</p>
+        	<img src="images/sp5_4.png" alt=""/>
+            <p>肩倒立自行车∑(っ °Д °;)っ</p>
+        	<img src="images/sp5_5.png" alt=""/>
+            <p>俯卧腿弯举(。>︿<)。</p>
+        	<img src="images/sp5_6.png" alt=""/>
+            <p>……_(:з」∠)_ <br/>看的好累，还是看看下面为各位MM们吐血推荐，“轻松”成为女神的必备神器吧！</p>
+        </div>
+        <div class="goodsWrap">
+        	<div class="left" onclick="openGoods(198)">
+            	<dl>
+                	<dt><img src="images/s5_1.jpeg" alt=""/></dt>
+                    <dd>
+                    	<p class="text">韩国营养保健 CJ innerb aqua玻尿酸补水保湿胶囊 徐仁英代言 高浓度玻尿酸 56粒</p>
+                        <p class="price"><i>￥</i>460.<i>00</i></p>
+                        <span></span>
+                    </dd>
+                </dl>
+            </div>
+        	<div class="right" onclick="openGoods(280)">
+            	<dl>
+                	<dt><img src="images/s5_2.jpeg" alt=""/></dt>
+                    <dd>
+                    	<p class="text">韩国Barnila/芭妮兰卸妆膏 零度清洁 温和 卸妆膏 100ml</p>
+                        <p class="price"><i>￥</i>118.<i>00</i></p>
+                        <span></span>
+                    </dd>
+                </dl>
+            </div>
+        	<div class="left" onclick="openGoods(254)">
+            	<dl>
+                	<dt><img src="images/s5_5.jpeg" alt=""/></dt>
+                    <dd>
+                    	<p class="text">韩国彩妆 Clio珂莱欧气垫BB霜粉饼粉底液 韩剧制作人IU/孔孝真同款</p>
+                        <p class="price"><i>￥</i>158.<i>00</i></p>
+                        <span></span>
+                    </dd>
+                </dl>
+            </div>			
+        	<div class="right" onclick="openGoods(218)">
+            	<dl>
+                	<dt><img src="images/s5_4.jpeg" alt=""/></dt>
+                    <dd>
+                    	<p class="text">韩国护肤 whoo/后拱辰享鹿茸面膜 去黄紧致排毒红润提亮120ml</p>
+                        <p class="price"><i>￥</i>316.<i>00</i></p>
+                        <span></span>
+                    </dd>
+                </dl>
+            </div>
+        	<div class="left" onclick="openGoods(200)">
+            	<dl>
+                	<dt><img src="images/s5_3.jpeg" alt=""/></dt>
+                    <dd>
+                    	<p class="text">韩国护肤 SU:M37 呼吸时光能量水乳面霜3三件套</p>
+                        <p class="price"><i>￥</i>677.<i>00</i></p>
+                        <span></span>
+                    </dd>
+                </dl>
+            </div>
+        	<div class="right" onclick="openGoods(326)">
+            	<dl>
+                	<dt><img src="images/s5_6.jpeg" alt=""/></dt>
+                    <dd>
+                    	<p class="text">韩国Clio 珂莱欧 双头染眉水性眉笔染眉膏</p>
+                        <p class="price"><i>￥</i>105.<i>00</i></p>
+                        <span></span>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+		function openGoods(n){ //未认证调用app方法
+		if(browser.versions.ios){
+			window.location.href="zmg://loadUrl/" + n
+		}else{
+		js.method(n);
+		}
+		}	
+				//判断访问终端
+		var browser = {
+		    versions:function(){
+		        var u = navigator.userAgent, app = navigator.appVersion;
+		        return {
+		            trident: u.indexOf('Trident') > -1, //IE内核
+		            presto: u.indexOf('Presto') > -1, //opera内核
+		            webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+		            gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1,//火狐内核
+		            mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
+		            ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+		            android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器
+		            iPhone: u.indexOf('iPhone') > -1 , //是否为iPhone或者QQHD浏览器
+		            iPad: u.indexOf('iPad') > -1, //是否iPad
+		            webApp: u.indexOf('Safari') == -1, //是否web应该程序，没有头部与底部
+		            weixin: u.indexOf('MicroMessenger') > -1, //是否微信
+		            qq: u.match(/\sQQ/i) == " qq" //是否QQ
+		        };
+		    }(),
+		    language:(navigator.browserLanguage || navigator.language).toLowerCase()
+		}
+</script>
+</html>

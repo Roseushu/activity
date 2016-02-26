@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+<title>专题</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<div class="wrap">
+    	<div class="articleWrap">
+        	<img src="images/1.png" alt=""/>
+            <h1>你也可以成为韩剧中的她/他</h1>
+            <h2>不是因为寂寞才看韩剧，而是看了韩剧才觉得寂寞。</h2>
+            <p class="text_1 redText">그럼 지금부터 나 좋아해. 가능하면 진심으로. 난 니가 좋아졌어.</p>
+            <p class="text_2">那么从现在开始喜欢我，尽可能的真心。因为我喜欢上你了。</p>
+            <p class="text_3">——《继承者们》</p>
+        	<img src="images/sp1_1.jpg" alt=""/>
+            <p class="text_1 redText">슬퍼서 우는 거 아니야 바람이 불어서 그래... 눈이 셔서... </p>
+            <p class="text_2">不是因为悲伤所以哭，是因为起风了…眼睛酸了…</p>
+            <p class="text_3">——《想你》</p>
+        	<img src="images/sp1_2.jpg" alt=""/>
+            <p class="text_1 redText">2015년1월7일 오후 10정각,내가 너한테 반한시간.</p>
+            <p class="text_2">2015年1月7日下午10点整，我被你迷住了。</p>
+            <p class="text_3">——《Kill me Heal me》</p>
+        	<img src="images/sp1_3.jpg" alt=""/>
+            <p class="text_1 redText">300년이 지나도, 당신을...사랑하겠습니다.</p>
+            <p class="text_2">就算过了300年，我...依然爱你~！</p>
+            <p class="text_3">——《屋塔房王世子》</p>
+        	<img src="images/sp1_4.jpg" alt=""/>
+            <p class="text_1 redText">짝사랑을 시작해 보려구요. 사양은 안 하는 걸로.</p>
+            <p class="text_2">我想开始试着暗恋你。就当做你没有拒绝。</p>
+            <p class="text_3">——《绅士的品格》</p>
+        	<img src="images/sp1_5.jpg" alt=""/>
+        </div>
+        <div class="goodsWrap">
+        	<div class="left" onclick="openGoods(278)">
+            	<dl>
+                	<dt><img src="images/s1_1.jpeg" alt=""/></dt>
+                    <dd>
+                    	<p class="text">韩国彩妆 IOPE艾诺碧 气垫粉底霜防晒+阻热+美白 遮瑕加强版 C21</p>
+                        <p class="price"><i>￥</i>235.<i>00</i></p>
+                        <span></span>
+                    </dd>
+                </dl>
+            </div>
+        	<div class="right" onclick="openGoods(279)">
+            	<dl>
+                	<dt><img src="images/s1_2.jpeg" alt=""/></dt>
+                    <dd>
+                    	<p class="text">韩国护法美体Amore/ 爱茉莉美妆仙玫瑰橄榄蜂蜜护发精油护发油70ml免洗</p>
+                        <p class="price"><i>￥</i>72.<i>00</i></p>
+                        <span></span>
+                    </dd>
+                </dl>
+            </div>
+			 <div class="left" onclick="openGoods(289)">
+            	<dl>
+                	<dt><img src="images/s1_3.jpeg" alt=""/></dt>
+                    <dd>
+                    	<p class="text">韩国爱茉莉麦迪安86牙膏去牙石清除牙垢固齿美白抗敏90g</p>
+                        <p class="price"><i>￥</i>15.<i>00</i></p>
+                        <span></span>
+                    </dd>
+                </dl>
+            </div>
+			 <div class="right" onclick="openGoods(290)">
+            	<dl>
+                	<dt><img src="images/s1_4.jpeg" alt=""/></dt>
+                    <dd>
+                    	<p class="text">韩国爱茉莉麦迪安64牙膏升级款86牙膏 蓝色120g美白去牙结石</p>
+                        <p class="price"><i>￥</i>19.<i>00</i></p>
+                        <span></span>
+                    </dd>
+                </dl>
+            </div>			
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+		function openGoods(n){ //未认证调用app方法
+		if(browser.versions.ios){
+			window.location.href="zmg://loadUrl/" + n
+		}else{
+		js.method(n);
+		}
+		}	
+				//判断访问终端
+		var browser = {
+		    versions:function(){
+		        var u = navigator.userAgent, app = navigator.appVersion;
+		        return {
+		            trident: u.indexOf('Trident') > -1, //IE内核
+		            presto: u.indexOf('Presto') > -1, //opera内核
+		            webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+		            gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1,//火狐内核
+		            mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
+		            ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+		            android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器
+		            iPhone: u.indexOf('iPhone') > -1 , //是否为iPhone或者QQHD浏览器
+		            iPad: u.indexOf('iPad') > -1, //是否iPad
+		            webApp: u.indexOf('Safari') == -1, //是否web应该程序，没有头部与底部
+		            weixin: u.indexOf('MicroMessenger') > -1, //是否微信
+		            qq: u.match(/\sQQ/i) == " qq" //是否QQ
+		        };
+		    }(),
+		    language:(navigator.browserLanguage || navigator.language).toLowerCase()
+		}
+</script>
+</html>
